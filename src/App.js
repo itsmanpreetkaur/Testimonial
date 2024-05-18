@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { reviews } from "./data";
+import "./index.css";
+import Testimonals from "./components/Testimonals";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-300 min-h-screen flex flex-col justify-center items-center">
+      <div className="text-center">
+        <h4 className="font-bold text-2xl">Our Testimonials</h4>
+        <div className="h-[5px] w-[1/10] bg-violet-600 text-center"></div>
+        <Testimonals reviews={reviews} />
+      </div>
     </div>
   );
 }
 
 export default App;
+
